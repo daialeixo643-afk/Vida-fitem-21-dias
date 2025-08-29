@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vida Fit em 21 Dias — Ebook Oficial</title>
+  <meta name="description" content="Transforme sua rotina com exercícios em casa, alimentação saudável e hábitos de bem-estar. Ebook completo: Vida Fit em 21 Dias." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a;
+      --panel:#0b1224;
+      --brand:#22c55e;
+      --brand-2:#16a34a;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --card:#101937;
+      --accent:#60a5fa;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b1120 0%, #0f172a 60%, #111827 100%);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1150px;margin:0 auto;padding:0 20px}
+
+    header{position:sticky;top:0;z-index:50;background:rgba(11,17,32,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}
+    .brand .logo{width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow:var(--shadow)}
+    .menu{display:flex;gap:22px}
+    .menu a{color:var(--muted);font-weight:600}
+    .menu a:hover{color:#fff}
+
+    .btn{display:inline-block;padding:14px 22px;border-radius:12px;font-weight:700;box-shadow:var(--shadow);transition:.25s ease;background:var(--brand);color:#0b1120}
+    .btn:hover{transform:translateY(-2px);background:var(--brand-2)}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,.18);color:#fff}
+    .btn-outline:hover{border-color:var(--brand);color:#fff}
+
+    .hero{position:relative;overflow:hidden}
+    .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:70px 0}
+    .spark{position:absolute;inset:-20%;background:radial-gradient(60% 60% at 70% 20%, rgba(34,197,94,.25), transparent 60%);filter:blur(40px);z-index:-1}
+    h1{font-family:Poppins,Inter,sans-serif;font-size:clamp(2rem,5vw,3.5rem);line-height:1.15;margin:.3rem 0 1rem}
+    .lead{font-size:1.1rem;color:var(--muted);max-width:52ch}
+    .actions{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);min-height:130px}
+    .pill{display:inline-block;font-size:.8rem;color:#0b1120;background:var(--accent);padding:6px 10px;border-radius:999px;font-weight:800;letter-spacing:.02em}
+
+    .section{padding:70px 0}
+    .section h2{font-family:Poppins,Inter,sans-serif;font-size:clamp(1.6rem,3.5vw,2.4rem);margin:0 0 10px}
+    .section p.sub{color:var(--muted);margin:0 0 26px}
+
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+    .list{display:grid;gap:12px}
+    .row{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid rgba(255,255,255,.06);padding:16px;border-radius:14px}
+    .row .dot{min-width:10px;height:10px;border-radius:999px;background:var(--brand);margin-top:8px}
+
+    .offer{background:linear-gradient(135deg, rgba(34,197,94,.15), rgba(96,165,250,.12));border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+    .price{font-size:2.4rem;font-weight:800}
+
+    details{background:var(--card);border:1px solid rgba(255,255,255,.06);padding:16px;border-radius:14px}
+    summary{cursor:pointer;font-weight:700}
+    details+details{margin-top:12px}
+
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:30px 0;color:var(--muted);text-align:center}
+
+    @media (max-width: 980px){.hero .wrap{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}.grid-2{grid-template-columns:1fr}}
+    @media (max-width: 640px){.features{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><div class="logo" aria-hidden="true"></div> <span>Vida Fit</span></div>
+      <nav class="menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#conteudo">Conteúdo</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#autora">Autora</a>
+        <a href="#oferta" class="btn btn-outline">Quero meu ebook</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="spark"></div>
+      <div class="container wrap">
+        <div>
+          <div class="kicker">Programa em 3 semanas</div>
+          <h1>Vida Fit em 21 Dias</h1>
+          <p class="lead">Exercícios que cabem na rotina, alimentação inteligente e hábitos simples para mais energia, foco e autoestima.</p>
+          <div class="actions">
+            <a class="btn" href="#ebook-conteudo">📖 Ler o eBook agora</a>
+            <a class="btn btn-outline" href="ebook.pdf" target="_blank" rel="noopener">📥 Baixar PDF</a>
+          </div>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=1200&auto=format&fit=crop" alt="Pessoa treinando em casa" style="border-radius:22px;border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)">
+        </div>
+      </div>
+    </section>
+
+    <!-- OFERTA -->
+    <section id="oferta" class="section">
+      <div class="container">
+        <div class="offer">
+          <h2>Pronta(o) para transformar sua rotina?</h2>
+          <p class="sub">Acesso imediato. Leia aqui mesmo ou baixe o PDF.</p>
+          <div class="actions">
+            <a class="btn" href="#ebook-conteudo">📖 Ler o eBook agora</a>
+            <a class="btn btn-outline" href="ebook.pdf" target="_blank" rel="noopener">📥 Baixar PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEÚDO DO EBOOK -->
+    <section id="ebook-conteudo" class="section">
+      <div class="container">
+        <h2>Vida Fit em 21 Dias — Guia Completo</h2>
+        <p class="sub">Por Daiane Barros Sousa</p>
+
+        <h3>1. Introdução</h3>
+        <p>Neste guia, você vai encontrar orientações simples e eficazes para cuidar do corpo e da mente...</p>
+
+        <h3>2. Os pilares da saúde</h3>
+        <ul>
+          <li><strong>Nutrição:</strong> comer de forma inteligente.</li>
+          <li><strong>Exercício:</strong> movimentar-se regularmente.</li>
+          <li><strong>Sono:</strong> descansar para recuperar.</li>
+          <li><strong>Equilíbrio emocional:</strong> manter a mente saudável.</li>
+        </ul>
+
+        <h3>3. Alimentação equilibrada</h3>
+        <p>Priorize alimentos naturais: frutas, verduras, legumes e proteínas magras...</p>
+
+        <h3>4. Importância da atividade física</h3>
+        <ul>
+          <li>Melhora a saúde cardiovascular</li>
+          <li>Ajuda no controle de peso</li>
+          <li>Libera endorfinas (hormônios do bem-estar)</li>
+          <li>Aumenta disposição e foco</li>
+        </ul>
+
+        <h3>5. Bem-estar mental e emocional</h3>
+        <p>Praticar mindfulness, meditação e manter contato com amigos e familiares...</p>
+
+        <h3>6. Rotina saudável: sono e hábitos</h3>
+        <p>Dormir entre 7 a 9 horas por noite, evitar telas antes de dormir...</p>
+
+        <h3>7. Dicas práticas de fitness para iniciantes</h3>
+        <p>Comece com caminhadas de 20 min, evolua para treinos de resistência...</p>
+
+        <h3>8. Receitas fáceis e nutritivas</h3>
+        <ul>
+          <li>Smoothie energético: banana + aveia + leite vegetal</li>
+          <li>Panqueca proteica: ovo + aveia + banana</li>
+          <li>Salada colorida: mix de folhas + frango grelhado + azeite</li>
+        </ul>
+
+        <h3>9. Suplementação: quando usar?</h3>
+        <p>Apenas quando houver deficiência ou necessidade extra...</p>
+
+        <h3>10. Plano de 21 dias para um novo estilo de vida</h3>
+        <ul>
+          <li><strong>Semana 1:</strong> ajuste de hábitos alimentares + caminhadas leves</li>
+          <li><strong>Semana 2:</strong> treino de força + mais vegetais na dieta</li>
+          <li><strong>Semana 3:</strong> mindfulness + treino regular + rotina de sono</li>
+        </ul>
+
+        <h3>11. Conclusão</h3>
+        <p>A saúde não é sobre restrições, mas sobre equilíbrio...</p>
+
+        <h3>12. Referências</h3>
+        <ul>
+          <li>Organização Mundial da Saúde (OMS)</li>
+          <li>Sociedade Brasileira de Nutrição (SBN)</li>
+          <li>American College of Sports Medicine (ACSM)</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Vida Fit em 21 Dias • Criado por Daiane • Contato: seuemail@exemplo.com</p>
+    </div>
+  </footer>
+</body>
+</html>
